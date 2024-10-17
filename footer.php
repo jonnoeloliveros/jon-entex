@@ -184,10 +184,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
     </script>
     <script src="<?php echo get_template_directory_uri(); ?>/js/custom.js"></script>
-    <!-- Google Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-    <!-- End Google Map -->
-
+    <?php
+        $google_api_key = get_field('theme_google_api_key', 'option');
+        if ( !empty( $google_api_key ) ) {
+            ?>
+            <!-- Google Map -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $google_api_key; ?>&callback=myMap"></script>
+            <!-- End Google Map -->
+            <?php
+        }
+    ?>
     <!-- WordPress Footer Hook -->
     <?php wp_footer(); ?>
 </body>

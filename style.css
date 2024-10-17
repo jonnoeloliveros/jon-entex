@@ -1,0 +1,60 @@
+/*
+Theme Name: Entex
+Author: Jon
+Author URI: https://jon-noel.web.app/
+Description: Theme converted from https://html.design/download/entex-investment-html-template/. Need to use ACF plugin.
+Version: 1.0
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+*/
+
+.wpcf7-form input[type="submit"] {
+  display: none;
+}
+.wpcf7-form textarea.message-box {
+  width: 100%;
+  border: none;
+  height: 125px;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  padding-left: 25px;
+  background-color: #ffffff;
+  outline: none;
+  color: #ffffff;
+  -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+}
+ul.sub-menu {
+  padding: unset;
+  list-style: unset;
+  position: absolute;
+  background: white;
+  width: max-content;
+  transition: 0.3s ease-in;
+  display: none;
+}
+.menu-item-has-children {
+  position: relative;
+}
+ul.sub-menu .nav-item .nav-link {
+  text-align: left !important;
+  color: black !important;
+}
+.menu-item-has-children:hover .sub-menu {
+  display: block;
+}
+@media only screen and (max-width: 991px) {
+  ul.sub-menu {
+    padding: unset;
+    list-style: unset;
+    position: relative;
+    background: unset;
+    width: inherit;
+    transition: inherit;
+    display: block;
+  }
+  ul.sub-menu .nav-item .nav-link {
+    text-align: center !important;
+    color: #ffffff !important;
+  }
+}
